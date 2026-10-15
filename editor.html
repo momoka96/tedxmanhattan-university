@@ -98,7 +98,7 @@
       button.disabled = true;
       status.textContent = 'Publishing…';
       try {
-        const html = '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<title>TEDxManhattan University</title>\n<link rel="stylesheet" href="style.css">\n</head>\n<body>\n' + editor.getHtml() + '\n<script src="script.js"><\\/script>\n</body>\n</html>';
+        const html = '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<title>TEDxManhattan University</title>\n<link rel="stylesheet" href="style.css">\n</head>\n<body>\n' + editor.getHtml() + '\n<script src="script.js"><' + '/script>\n</body>\n</html>';
         const response = await fetch('https://tedxmanhattan-university.mabdulkarim01.workers.dev', {
           method: 'POST',
           headers: {'Content-Type':'application/json'},
