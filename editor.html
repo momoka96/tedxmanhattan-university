@@ -25,7 +25,8 @@
   <button class="btn plain" id="preview">Preview</button>
   <button class="btn plain" id="uploadButton">Add/replace image</button>
   <input id="imageFile" type="file" accept="image/*" hidden>
-  <button class="btn save" id="save">Download website files</button>
+  <button class="btn plain" id="save">Download backup</button>
+  <button class="btn save" id="publish">Publish to website</button>
   <span id="status">Loading your website…</span>
 </div>
 <div id="gjs"></div>
@@ -89,6 +90,28 @@
       reader.onload = function(){selected.set('src', reader.result); status.textContent='Image added — remember to download and publish';};
       reader.readAsDataURL(file);
       e.target.value='';
+    });
+    document.getElementById('publish').addEventListener('click', async function(){
+      const password = prompt('Enter the private editor password you saved in Cloudflare:');
+      if (password === null) return;
+      const button = this;
+      button.disabled = true;
+      status.textContent = 'Publishing…';
+      try {
+        const html = '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<title>TEDxManhattan University</title>\n<link rel="stylesheet" href="style.css">\n</head>\n<body>\n' + editor.getHtml() + '\n<script src="script.js"><\\/script>\n</body>\n</html>';
+        const response = await fetch('https://tedxmanhattan-university.mabdulkarim01.workers.dev', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({password:password, files:{'index.html':html,'style.css':editor.getCss()}})
+        });
+        const result = await response.json();
+        if (!response.ok || !result.success) throw new Error(result.error || 'Publish failed');
+        status.textContent = 'Published to GitHub';
+        alert('Published! Your live website may take a few minutes to update.');
+      } catch (error) {
+        status.textContent = 'Publish failed';
+        alert('Publishing failed: ' + (error.message || error) + '. You can still use Download backup.');
+      } finally { button.disabled = false; }
     });
     document.getElementById('save').addEventListener('click',function(){
       const page = '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<title>TEDxManhattan University</title>\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">\n<link rel="stylesheet" href="style.css">\n</head>\n<body>\n' + editor.getHtml() + '\n<script src="script.js"><\/script>\n</body>\n</html>';
