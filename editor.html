@@ -10,11 +10,11 @@
 <link rel="stylesheet" href="https://unpkg.com/grapesjs@0.22.5/dist/css/grapes.min.css">
 <style>
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Inter,Arial,sans-serif;color:#171717}
-#topbar{min-height:58px;background:#111;color:#fff;display:flex;align-items:center;gap:10px;padding:10px 14px;flex-wrap:wrap}
+#topbar{position:sticky;top:0;z-index:1000000;width:100%;min-height:58px;background:#111;color:#fff;display:flex;align-items:center;gap:10px;padding:10px 14px;flex-wrap:wrap;box-shadow:0 2px 10px rgba(0,0,0,.2)}
 #topbar strong{margin-right:auto}#topbar .brand{color:#e62b1e}.btn{border:0;border-radius:7px;padding:9px 13px;font-weight:700;cursor:pointer}.save{background:#e62b1e;color:#fff}.plain{background:#333;color:#fff}.hint{font-size:12px;color:#bbb}
 #gjs{height:calc(100vh - 58px)}
 .gjs-one-bg{background:#f5f4f0}.gjs-two-color{color:#222}.gjs-three-bg{background:#e62b1e;color:#fff}.gjs-four-color,.gjs-four-color-h:hover{color:#e62b1e}
-#status{font-size:12px;color:#ddd;max-width:220px}
+#status{font-size:12px;color:#ddd;max-width:220px}#publish{position:relative;z-index:1000001;white-space:nowrap}#topbar button{flex-shrink:0}
 @media(max-width:700px){#topbar{gap:6px}#topbar strong{width:100%}.hint{display:none}#gjs{height:calc(100vh - 105px)}}
 </style>
 </head>
