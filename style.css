@@ -13,3 +13,6 @@
 
 /* Ensure executive team names use TEDx red regardless of other heading styles. */
 .executive-grid .team-role h3{color:#EB0028!important;font-size:22px!important;margin:0 0 8px!important}
+
+/* Slightly enlarge the EXECUTIVE TEAM label without changing its font style. */
+.executive-team > .team-section-heading > span{font-size:13px!important}
