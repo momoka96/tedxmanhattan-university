@@ -3,3 +3,6 @@
 
 /* Keep the speaker application link prominent and red. */
 .section-heading .speaker-apply-link{color:#e62b1e!important;font-size:22px!important;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;display:inline-block;transition:color .2s,transform .2s}.section-heading .speaker-apply-link:hover{color:#ff5145!important;transform:translateY(-2px)}
+
+/* Give the venue section its own bold TEDx-red background. */
+#venue.venue{background:#e62b1e;color:#fff}#venue.venue .eyebrow{color:#ffc4bf}#venue.venue .venue-box{border-color:rgba(255,255,255,.45)}#venue.venue .venue-box p{color:#ffe0dd}#venue.venue .text-link{color:#fff;border-color:#fff}#venue.venue .text-link:hover{color:#111}
