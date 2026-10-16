@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero Section Test — TEDxManhattan University</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#eb0028;--black:#111;--cream:#f6f3ed;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--cream);color:var(--black)}
+.preview-banner{background:#fff0c9;color:#493a16;text-align:center;padding:11px 18px;font-size:12px;font-weight:800;letter-spacing:.03em}
+.nav{height:76px;padding:0 6vw;display:flex;justify-content:space-between;align-items:center;background:var(--cream);border-bottom:1px solid #ded9d0}
+.logo{font-size:17px;font-weight:800;letter-spacing:-.6px;text-decoration:none;color:var(--black)}.logo b{color:var(--red);margin-right:5px}.nav a.link{font-size:12px;font-weight:700;text-decoration:none;margin-left:25px}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:calc(100vh - 112px);background:var(--red);color:#fff;padding:70px 8vw 42px;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(circle at 75% 40%,rgba(255,255,255,.12),transparent 28%),linear-gradient(135deg,transparent 55%,rgba(0,0,0,.09) 55%);opacity:.9}
+.hero-copy{position:relative;z-index:2;max-width:740px}.kicker{font-size:11px;font-weight:800;letter-spacing:2.3px;text-transform:uppercase;margin:0 0 24px;color:#ffe3e7}
+h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(62px,9vw,132px);line-height:.85;letter-spacing:-.085em;margin:0;max-width:800px}h1 .white{color:#fff}h1 .outline{color:transparent;-webkit-text-stroke:2px #fff}
+.desc{max-width:470px;font-size:17px;line-height:1.7;color:#fff0f2;margin:28px 0 26px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:16px;text-decoration:none;padding:15px 20px;font-size:12px;font-weight:800;border:1.5px solid white;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-3px)}.btn.white{background:white;color:var(--black)}.btn.clear{color:white}.meta{display:flex;gap:38px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.4);padding-top:18px;margin-top:44px;max-width:730px}.meta div{display:flex;flex-direction:column;gap:6px}.meta strong{font-size:9px;letter-spacing:1.6px}.meta span{font-size:12px;font-weight:600}
+.sticker-field{position:absolute;z-index:1;right:4vw;top:8%;width:min(42vw,560px);height:78%;pointer-events:none}
+.sticker{position:absolute;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 35px rgba(60,0,10,.2);font-weight:900;line-height:.8;letter-spacing:-.08em}
+.sticker-x{width:clamp(170px,25vw,330px);height:clamp(170px,25vw,330px);right:3%;top:13%;background:var(--black);border:5px solid white;border-radius:32% 22% 31% 25%;transform:rotate(11deg);color:var(--red);font-size:clamp(150px,24vw,300px);text-shadow:5px 5px 0 #fff}
+.sticker-idea{width:150px;height:105px;right:58%;top:7%;border:4px solid var(--black);border-radius:48% 42% 46% 35%;background:#fff;color:var(--black);font-size:19px;line-height:1.05;text-align:center;transform:rotate(-12deg);padding:12px}
+.sticker-talk{width:160px;height:125px;right:0;top:58%;background:#fff;border:4px solid var(--black);border-radius:25px;color:var(--red);font-size:20px;text-align:center;line-height:1.05;transform:rotate(8deg);padding:12px}
+.sticker-dot{width:95px;height:95px;right:53%;top:67%;border:4px solid #fff;border-radius:50%;background:var(--black);color:#fff;font-size:14px;text-align:center;line-height:1.1;transform:rotate(-10deg);padding:10px}
+.spark{position:absolute;color:#fff;font-size:56px;font-weight:900;line-height:1}.spark.s1{right:11%;top:4%;transform:rotate(15deg)}.spark.s2{right:57%;top:47%;font-size:38px;transform:rotate(-12deg)}.spark.s3{right:6%;top:84%;font-size:32px}
+.x-pattern{position:absolute;right:12%;top:30%;font-size:clamp(230px,34vw,460px);font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.22);line-height:.8;z-index:-1}
+.note{padding:16px 8vw;background:#fff;color:#555;font-size:12px;line-height:1.6;border-top:1px solid #e4ded4}.note strong{color:#111}
+@media(max-width:800px){.nav{padding:0 5vw}.nav a.link:not(.back){display:none}.hero{padding:62px 7vw 38px;min-height:calc(100vh - 112px);align-items:flex-start}.hero-copy{padding-top:25px}.sticker-field{right:-8%;top:25%;width:65vw;height:65%;opacity:.5}.hero-copy{max-width:100%}h1{font-size:clamp(58px,12vw,90px)}.desc{max-width:390px}.meta{gap:18px;margin-top:32px}.meta div{min-width:27%}.sticker-idea{right:58%;}.sticker-talk{right:0}.x-pattern{right:0;top:40%}}
+@media(max-width:480px){.hero{padding:48px 6vw 32px}.kicker{font-size:9px;letter-spacing:1.7px}h1{font-size:58px}.desc{font-size:14px;max-width:320px}.sticker-field{right:-15%;top:36%;opacity:.35}.buttons{gap:8px}.btn{padding:13px 14px;font-size:11px}.meta{gap:14px}.meta div{min-width:42%}.meta span{font-size:11px}.note{padding:14px 6vw}}
+</style>
+</head>
+<body>
+<div class="preview-banner">TEST PREVIEW ONLY — This is a design mockup. Your live homepage has not been changed.</div>
+<header class="nav"><a class="logo" href="https://tedxmanhattanuni.com/"><b>TEDx</b>Manhattan University</a><div><a class="link" href="https://tedxmanhattanuni.com/">View current site ↗</a></div></header>
+<main>
+<section class="hero">
+<div class="x-pattern">X</div>
+<div class="hero-copy">
+<p class="kicker">Manhattan University · Spring 2027</p>
+<h1>Ideas that<br><span class="outline">move us.</span></h1>
+<p class="desc">One campus. One stage. A room full of ideas worth spreading.</p>
+<div class="buttons"><a class="btn white" href="https://forms.gle/fSc8qCUAz4fTYbbi7" target="_blank" rel="noopener noreferrer">Apply to Speak <span>↗</span></a><a class="btn clear" href="https://forms.gle/XkfL6cfEfAzUNruA9" target="_blank" rel="noopener noreferrer">Join the Team <span>↗</span></a></div>
+<div class="meta"><div><strong>DATE</strong><span>Spring 2027</span></div><div><strong>LOCATION</strong><span>Manhattan University</span></div><div><strong>THEME</strong><span>To Be Announced</span></div></div>
+</div>
+<div class="sticker-field" aria-hidden="true">
+<div class="sticker sticker-x">X</div><div class="sticker sticker-idea">IDEAS<br>WORTH<br>SHARING</div><div class="sticker sticker-talk">THINK<br>LOUDER<br>↗</div><div class="sticker sticker-dot">ONE<br>STAGE<br>∞</div><span class="spark s1">✳</span><span class="spark s2">✦</span><span class="spark s3">✳</span>
+</div>
+</section>
+<div class="note"><strong>What changed in this test:</strong> Only the first hero section is being redesigned: bold TEDx red, a layered sticker-style X graphic, playful mini-stickers, outlined typography, and updated buttons. The remaining sections of your actual website are not touched. Inspired by your Pinterest TEDx anniversary sticker reference.</div>
+</main>
+</body>
+</html>
