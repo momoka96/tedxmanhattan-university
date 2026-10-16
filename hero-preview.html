@@ -3,53 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hero Section Test — TEDxManhattan University</title>
+<title>Hero Section Test 2 — TEDx Manhattan University</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--red:#eb0028;--black:#111;--cream:#f6f3ed;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--cream);color:var(--black)}
+:root{--red:#EB0028;--black:#101010;--white:#fff;--paper:#f8f7f4}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--paper);color:var(--black)}
 .preview-banner{background:#fff0c9;color:#493a16;text-align:center;padding:11px 18px;font-size:12px;font-weight:800;letter-spacing:.03em}
-.nav{height:76px;padding:0 6vw;display:flex;justify-content:space-between;align-items:center;background:var(--cream);border-bottom:1px solid #ded9d0}
-.logo{font-size:17px;font-weight:800;letter-spacing:-.6px;text-decoration:none;color:var(--black)}.logo b{color:var(--red);margin-right:5px}.nav a.link{font-size:12px;font-weight:700;text-decoration:none;margin-left:25px}
-.hero{position:relative;isolation:isolate;overflow:hidden;min-height:calc(100vh - 112px);background:var(--red);color:#fff;padding:70px 8vw 42px;display:flex;align-items:center}
-.hero:before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(circle at 75% 40%,rgba(255,255,255,.12),transparent 28%),linear-gradient(135deg,transparent 55%,rgba(0,0,0,.09) 55%);opacity:.9}
-.hero-copy{position:relative;z-index:2;max-width:740px}.kicker{font-size:11px;font-weight:800;letter-spacing:2.3px;text-transform:uppercase;margin:0 0 24px;color:#ffe3e7}
-h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(62px,9vw,132px);line-height:.85;letter-spacing:-.085em;margin:0;max-width:800px}h1 .white{color:#fff}h1 .outline{color:transparent;-webkit-text-stroke:2px #fff}
-.desc{max-width:470px;font-size:17px;line-height:1.7;color:#fff0f2;margin:28px 0 26px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:16px;text-decoration:none;padding:15px 20px;font-size:12px;font-weight:800;border:1.5px solid white;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-3px)}.btn.white{background:white;color:var(--black)}.btn.clear{color:white}.meta{display:flex;gap:38px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.4);padding-top:18px;margin-top:44px;max-width:730px}.meta div{display:flex;flex-direction:column;gap:6px}.meta strong{font-size:9px;letter-spacing:1.6px}.meta span{font-size:12px;font-weight:600}
-.sticker-field{position:absolute;z-index:1;right:4vw;top:8%;width:min(42vw,560px);height:78%;pointer-events:none}
-.sticker{position:absolute;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 35px rgba(60,0,10,.2);font-weight:900;line-height:.8;letter-spacing:-.08em}
-.sticker-x{width:clamp(170px,25vw,330px);height:clamp(170px,25vw,330px);right:3%;top:13%;background:var(--black);border:5px solid white;border-radius:32% 22% 31% 25%;transform:rotate(11deg);color:var(--red);font-size:clamp(150px,24vw,300px);text-shadow:5px 5px 0 #fff}
-.sticker-idea{width:150px;height:105px;right:58%;top:7%;border:4px solid var(--black);border-radius:48% 42% 46% 35%;background:#fff;color:var(--black);font-size:19px;line-height:1.05;text-align:center;transform:rotate(-12deg);padding:12px}
-.sticker-talk{width:160px;height:125px;right:0;top:58%;background:#fff;border:4px solid var(--black);border-radius:25px;color:var(--red);font-size:20px;text-align:center;line-height:1.05;transform:rotate(8deg);padding:12px}
-.sticker-dot{width:95px;height:95px;right:53%;top:67%;border:4px solid #fff;border-radius:50%;background:var(--black);color:#fff;font-size:14px;text-align:center;line-height:1.1;transform:rotate(-10deg);padding:10px}
-.spark{position:absolute;color:#fff;font-size:56px;font-weight:900;line-height:1}.spark.s1{right:11%;top:4%;transform:rotate(15deg)}.spark.s2{right:57%;top:47%;font-size:38px;transform:rotate(-12deg)}.spark.s3{right:6%;top:84%;font-size:32px}
-.x-pattern{position:absolute;right:12%;top:30%;font-size:clamp(230px,34vw,460px);font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.22);line-height:.8;z-index:-1}
-.note{padding:16px 8vw;background:#fff;color:#555;font-size:12px;line-height:1.6;border-top:1px solid #e4ded4}.note strong{color:#111}
-@media(max-width:800px){.nav{padding:0 5vw}.nav a.link:not(.back){display:none}.hero{padding:62px 7vw 38px;min-height:calc(100vh - 112px);align-items:flex-start}.hero-copy{padding-top:25px}.sticker-field{right:-8%;top:25%;width:65vw;height:65%;opacity:.5}.hero-copy{max-width:100%}h1{font-size:clamp(58px,12vw,90px)}.desc{max-width:390px}.meta{gap:18px;margin-top:32px}.meta div{min-width:27%}.sticker-idea{right:58%;}.sticker-talk{right:0}.x-pattern{right:0;top:40%}}
-@media(max-width:480px){.hero{padding:48px 6vw 32px}.kicker{font-size:9px;letter-spacing:1.7px}h1{font-size:58px}.desc{font-size:14px;max-width:320px}.sticker-field{right:-15%;top:36%;opacity:.35}.buttons{gap:8px}.btn{padding:13px 14px;font-size:11px}.meta{gap:14px}.meta div{min-width:42%}.meta span{font-size:11px}.note{padding:14px 6vw}}
+.nav{height:76px;padding:0 6vw;display:flex;justify-content:space-between;align-items:center;background:var(--paper);border-bottom:1px solid #e3e0dc}
+.logo{font-size:17px;font-weight:800;letter-spacing:-.6px;text-decoration:none;color:var(--black)}.logo b{color:var(--red);margin-right:5px}.nav a.link{font-size:12px;font-weight:700;text-decoration:none;color:var(--black)}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:calc(100vh - 112px);background:var(--red);color:var(--white);padding:70px 8vw 42px;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(115deg,rgba(0,0,0,.04),transparent 55%),radial-gradient(circle at 80% 20%,rgba(255,255,255,.11),transparent 32%)}
+.hero-content{position:relative;z-index:2;width:min(100%,880px)}
+.kicker{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin:0 0 27px;color:#fff}
+.kicker:before{content:"";width:28px;height:3px;background:#fff}
+h1{font-size:clamp(64px,10vw,140px);line-height:.84;letter-spacing:-.09em;font-weight:900;margin:0;max-width:850px}
+h1 span{display:block;color:transparent;-webkit-text-stroke:2px #fff}
+.desc{max-width:460px;font-size:17px;line-height:1.7;color:#fff;margin:28px 0 27px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:22px;text-decoration:none;padding:15px 20px;font-size:12px;font-weight:800;border:1.5px solid #fff;transition:transform .2s}.btn:hover{transform:translateY(-3px)}.btn.white{background:#fff;color:var(--black)}.btn.clear{color:#fff}
+.meta{display:flex;gap:38px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.45);padding-top:18px;margin-top:44px;max-width:700px}.meta div{display:flex;flex-direction:column;gap:6px}.meta strong{font-size:9px;letter-spacing:1.6px}.meta span{font-size:12px;font-weight:600}
+.x-mark{position:absolute;z-index:0;right:4vw;top:50%;transform:translateY(-50%) rotate(-9deg);width:clamp(220px,36vw,520px);height:clamp(220px,36vw,520px);opacity:.98;pointer-events:none}
+.x-mark:before,.x-mark:after{content:"";position:absolute;left:50%;top:50%;width:26%;height:112%;background:var(--black);border:clamp(5px,.9vw,12px) solid #fff;transform-origin:center;border-radius:2px}
+.x-mark:before{transform:translate(-50%,-50%) rotate(42deg)}
+.x-mark:after{transform:translate(-50%,-50%) rotate(-42deg)}
+.x-cut{position:absolute;z-index:1;left:50%;top:50%;width:17%;height:105%;background:var(--red);transform:translate(-50%,-50%) rotate(42deg);border-left:3px solid rgba(255,255,255,.95);border-right:3px solid rgba(255,255,255,.95);pointer-events:none}
+.x-lines{position:absolute;right:0;top:0;width:43%;height:100%;opacity:.12;background:repeating-linear-gradient(135deg,transparent 0 17px,#fff 18px 20px);clip-path:polygon(42% 0,100% 0,100% 100%,0 100%)}
+.footnote{padding:16px 8vw;background:#fff;color:#555;font-size:12px;line-height:1.6;border-top:1px solid #e4ded4}.footnote strong{color:#111}
+@media(max-width:760px){.nav{padding:0 5vw}.hero{padding:54px 7vw 35px;align-items:flex-start;min-height:calc(100vh - 112px)}.hero-content{padding-top:20px}.x-mark{right:-24%;top:42%;width:60vw;height:60vw;opacity:.3}h1{font-size:clamp(60px,12vw,94px)}.desc{font-size:15px;max-width:360px}.meta{gap:20px;margin-top:34px}.meta div{min-width:27%}.x-lines{width:60%}}
+@media(max-width:480px){.hero{padding:44px 6vw 30px}.kicker{font-size:9px;letter-spacing:1.5px}h1{font-size:58px}.desc{font-size:14px;max-width:310px}.buttons{gap:8px}.btn{padding:13px 14px;font-size:11px}.meta{gap:14px}.meta div{min-width:42%}.meta span{font-size:11px}.x-mark{right:-32%;top:42%;width:68vw;height:68vw}.footnote{padding:14px 6vw}}
 </style>
 </head>
 <body>
-<div class="preview-banner">TEST PREVIEW ONLY — This is a design mockup. Your live homepage has not been changed.</div>
-<header class="nav"><a class="logo" href="https://tedxmanhattanuni.com/"><b>TEDx</b>Manhattan University</a><div><a class="link" href="https://tedxmanhattanuni.com/">View current site ↗</a></div></header>
+<div class="preview-banner">TEST PREVIEW 2 — Your live homepage has not been changed.</div>
+<header class="nav"><a class="logo" href="https://tedxmanhattanuni.com/"><b>TEDx</b>Manhattan University</a><a class="link" href="https://tedxmanhattanuni.com/">View current site ↗</a></header>
 <main>
 <section class="hero">
-<div class="x-pattern">X</div>
-<div class="hero-copy">
+<div class="x-lines" aria-hidden="true"></div><div class="x-mark" aria-hidden="true"><span class="x-cut"></span></div>
+<div class="hero-content">
 <p class="kicker">Manhattan University · Spring 2027</p>
-<h1>Ideas that<br><span class="outline">move us.</span></h1>
+<h1>Ideas that<br><span>move us.</span></h1>
 <p class="desc">One campus. One stage. A room full of ideas worth spreading.</p>
 <div class="buttons"><a class="btn white" href="https://forms.gle/fSc8qCUAz4fTYbbi7" target="_blank" rel="noopener noreferrer">Apply to Speak <span>↗</span></a><a class="btn clear" href="https://forms.gle/XkfL6cfEfAzUNruA9" target="_blank" rel="noopener noreferrer">Join the Team <span>↗</span></a></div>
 <div class="meta"><div><strong>DATE</strong><span>Spring 2027</span></div><div><strong>LOCATION</strong><span>Manhattan University</span></div><div><strong>THEME</strong><span>To Be Announced</span></div></div>
 </div>
-<div class="sticker-field" aria-hidden="true">
-<div class="sticker sticker-x">X</div><div class="sticker sticker-idea">IDEAS<br>WORTH<br>SHARING</div><div class="sticker sticker-talk">THINK<br>LOUDER<br>↗</div><div class="sticker sticker-dot">ONE<br>STAGE<br>∞</div><span class="spark s1">✳</span><span class="spark s2">✦</span><span class="spark s3">✳</span>
-</div>
 </section>
-<div class="note"><strong>What changed in this test:</strong> Only the first hero section is being redesigned: bold TEDx red, a layered sticker-style X graphic, playful mini-stickers, outlined typography, and updated buttons. The remaining sections of your actual website are not touched. Inspired by your Pinterest TEDx anniversary sticker reference.</div>
+<div class="footnote"><strong>What changed:</strong> Removed the sticker collage/photo-style graphic and simplified the hero. The background now uses TEDx red (#EB0028), with a clean, oversized geometric X graphic and stronger typography. This is still a separate test page; your homepage is untouched. Pinterest blocks direct access to the pin image on my side, so this X is a clean interpretation rather than an exact copy. If you upload a screenshot of the pin, I can match its X much more closely.</div>
 </main>
 </body>
 </html>
