@@ -6,3 +6,6 @@
 
 /* Give the venue section its own bold TEDx-red background. */
 #venue.venue{background:#e62b1e;color:#fff}#venue.venue .eyebrow{color:#ffc4bf}#venue.venue .venue-box{border-color:rgba(255,255,255,.45)}#venue.venue .venue-box p{color:#ffe0dd}#venue.venue .text-link{color:#fff;border-color:#fff}#venue.venue .text-link:hover{color:#111}
+
+/* TEDx event logo lockup in the opening hero, following the official red/black wordmark treatment. */
+.hero-event-logo{display:inline-flex;flex-direction:column;align-items:flex-start;gap:0;margin:0 0 26px;font-family:Inter,Arial,sans-serif;font-weight:400;line-height:1;letter-spacing:0}.hero-logo-tedx{color:#EB0028;font-size:clamp(34px,4vw,48px);font-weight:700;letter-spacing:-1.8px}.hero-logo-location{color:#fff;font-size:clamp(23px,2.7vw,32px);font-weight:400;letter-spacing:-.8px;margin-top:5px}@media(max-width:600px){.hero-event-logo{margin-bottom:22px}.hero-logo-tedx{font-size:36px}.hero-logo-location{font-size:24px}}
