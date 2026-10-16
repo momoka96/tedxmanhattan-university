@@ -16,3 +16,6 @@
 
 /* Slightly enlarge the EXECUTIVE TEAM label without changing its font style. */
 .executive-team > .team-section-heading > span{font-size:13px!important}
+
+/* Match the top-section team application bubble to the white primary button. */
+.hero-buttons .ghost{background:#fff;color:#111;border:1px solid #fff}
